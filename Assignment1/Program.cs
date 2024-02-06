@@ -105,3 +105,12 @@ class VirtualPet
                         Console.WriteLine("Invalid choice. Please try again.");
                         break;
                 }
+
+                // Simulate the passage of time after each action
+                pet.TimePasses();
+                Thread.Sleep(1000); // Simulate the wait time for an hour
+            }
+
+            Console.WriteLine("Thank you for playing the Virtual Pet Simulator!");
+        }
+    }
