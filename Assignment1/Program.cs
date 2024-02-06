@@ -7,3 +7,11 @@ class VirtualPet
     public int Hunger { get; set; }
     public int Happiness { get; set; }
     public int Health { get; set; }
+    public VirtualPet(string type, string name)
+    {
+        Type = type;
+        Name = name;
+        Hunger = 5;
+        Happiness = 5;
+        Health = 5;
+    }
