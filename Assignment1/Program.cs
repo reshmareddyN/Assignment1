@@ -81,3 +81,27 @@ class VirtualPet
 
                 Console.Write("Enter your choice (1-5): ");
                 string choice = Console.ReadLine();
+
+
+                switch (choice)
+                {
+                    case "1":
+                        pet.Feed();
+                        break;
+                    case "2":
+                        pet.Play();
+                        break;
+                    case "3":
+                        pet.Rest();
+                        break;
+                    case "4":
+                        pet.CheckStatus();
+                        pet.DisplayStats();
+                        break;
+                    case "5":
+                        exit = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice. Please try again.");
+                        break;
+                }
