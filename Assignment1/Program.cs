@@ -78,3 +78,6 @@ class VirtualPet
                 Console.WriteLine("3. Rest");
                 Console.WriteLine("4. Check Status");
                 Console.WriteLine("5. Exit");
+
+                Console.Write("Enter your choice (1-5): ");
+                string choice = Console.ReadLine();
