@@ -7,6 +7,7 @@ class VirtualPet
     public int Hunger { get; set; }
     public int Happiness { get; set; }
     public int Health { get; set; }
+    
     public VirtualPet(string type, string name)
     {
         Type = type;
@@ -38,7 +39,12 @@ class VirtualPet
             Hunger = Math.Min(10, Hunger + 1);
             Console.WriteLine($"{Name} has played. Happiness increased, and hunger slightly increased.");
         }
-        public void TimePasses()
+        else
+        {
+            Console.WriteLine($"{Name} is too hungry to play. Please feed the pet first.");
+        }
+    }
+    public void TimePasses()
         {
             Hunger = Math.Min(10, Hunger + 1);
             Happiness = Math.Max(0, Happiness - 1);
