@@ -61,3 +61,20 @@ class VirtualPet
 
             Console.Write("Enter pet type (e.g., cat, dog, rabbit): ");
             string petType = Console.ReadLine();
+
+            Console.Write("Enter pet name: ");
+            string petName = Console.ReadLine();
+
+            VirtualPet pet = new VirtualPet(petType, petName);
+            pet.DisplayWelcomeMessage();
+
+            bool exit = false;
+
+            while (!exit)
+            {
+                Console.WriteLine("\nSelect an action:");
+                Console.WriteLine("1. Feed");
+                Console.WriteLine("2. Play");
+                Console.WriteLine("3. Rest");
+                Console.WriteLine("4. Check Status");
+                Console.WriteLine("5. Exit");
