@@ -15,3 +15,7 @@ class VirtualPet
         Happiness = 5;
         Health = 5;
     }
+    public void DisplayStats()
+    {
+        Console.WriteLine($"Pet Stats - Hunger: {Hunger}/10, Happiness: {Happiness}/10, Health: {Health}/10");
+    }
