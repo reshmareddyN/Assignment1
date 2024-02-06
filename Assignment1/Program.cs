@@ -24,3 +24,9 @@ class VirtualPet
     {
         Console.WriteLine($"Pet Stats - Hunger: {Hunger}/10, Happiness: {Happiness}/10, Health: {Health}/10");
     }
+    public void Feed()
+    {
+        Hunger = Math.Max(0, Hunger - 2);
+        Health = Math.Min(10, Health + 1);
+        Console.WriteLine($"{Name} has been fed. Hunger decreased, and health slightly increased.");
+    }
