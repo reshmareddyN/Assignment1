@@ -15,6 +15,11 @@ class VirtualPet
         Happiness = 5;
         Health = 5;
     }
+    public void DisplayWelcomeMessage()
+    {
+        Console.WriteLine($"Welcome to the Virtual Pet Simulator!");
+        Console.WriteLine($"You have a {Type} named {Name}.");
+    }
     public void DisplayStats()
     {
         Console.WriteLine($"Pet Stats - Hunger: {Hunger}/10, Happiness: {Happiness}/10, Health: {Health}/10");
