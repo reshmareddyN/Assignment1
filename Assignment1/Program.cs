@@ -55,7 +55,7 @@ class VirtualPet
             Hunger = Math.Min(10, Hunger + 1);
             Happiness = Math.Max(0, Happiness - 1);
             Health = Math.Max(0, Health - 1);
-            Console.WriteLine("An hour has passed. Hunger increased, and happiness and health decreased slightly.");
+            //Console.WriteLine("An hour has passed. Hunger increased, and happiness and health decreased slightly.");
         }
         public void CheckStatus()
         {
