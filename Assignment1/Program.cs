@@ -45,3 +45,11 @@ class VirtualPet
             Health = Math.Max(0, Health - 1);
             Console.WriteLine("An hour has passed. Hunger increased, and happiness and health decreased slightly.");
         }
+        public void CheckStatus()
+        {
+            if (Hunger <= 2 || Happiness <= 2 || Health <= 2)
+            {
+                Console.WriteLine("Warning: Pet is in critical condition. Please take care of it!");
+            }
+        }
+    }
