@@ -44,6 +44,12 @@ class VirtualPet
             Console.WriteLine($"{Name} is too hungry to play. Please feed the pet first.");
         }
     }
+    public void Rest()
+    {
+        Health = Math.Min(10, Health + 2);
+        Happiness = Math.Max(0, Happiness - 1);
+        Console.WriteLine($"{Name} has rested. Health improved, and happiness slightly decreased.");
+    }
     public void TimePasses()
         {
             Hunger = Math.Min(10, Hunger + 1);
