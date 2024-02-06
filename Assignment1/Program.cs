@@ -1,4 +1,6 @@
-﻿class VirtualPet
+﻿using System;
+using System.Threading;
+class VirtualPet
 {
     public string Type { get; set; }
     public string Name { get; set; }
