@@ -14,7 +14,7 @@ class VirtualPet
         Name = name;
         Hunger = 5;
         Happiness = 5;
-        Health = 5;
+        Health = 8;
     }
     public void DisplayWelcomeMessage()
     {
@@ -27,13 +27,13 @@ class VirtualPet
     }
     public void Feed()
     {
-        Hunger = Math.Max(0, Hunger - 2);
-        Health = Math.Min(10, Health + 1);
+        Hunger = Math.Max(0, Hunger -2);
+        Health = Math.Min(10, Health +1);
         Console.WriteLine($"{Name} has been fed. Hunger decreased, and health slightly increased.");
     }
     public void Play()
     {
-        if (Hunger >= 3)
+        if (Hunger <= 3)
         {
             Happiness = Math.Min(10, Happiness + 2);
             Hunger = Math.Min(10, Hunger + 1);
