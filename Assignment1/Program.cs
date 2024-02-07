@@ -97,32 +97,27 @@ class VirtualPet
                 string choice = Console.ReadLine();
 
 
-                switch (choice)
-                {
-                    case "1":
-                        pet.Feed();
-                        break;
-                    case "2":
-                        pet.Play();
-                        break;
-                    case "3":
-                        pet.Rest();
-                        break;
-                    case "4":
-                        pet.CheckStatus();
-                        pet.DisplayStats();
-                        break;
-                    case "5":
-                        exit = true;
-                        break;
-                    default:
-                        Console.WriteLine("Invalid choice. Please try again.");
-                        break;
-                }
-
-                // Simulate the passage of time after each action
-                pet.TimePasses();
-                Thread.Sleep(1000); // Simulate the wait time for an hour
+            switch (choice)
+            {
+                case "1":
+                    pet.Feed();
+                    break;
+                case "2":
+                    pet.Play();
+                    break;
+                case "3":
+                    pet.Rest();
+                    break;
+                case "4":
+                    pet.CheckStatus();
+                    pet.DisplayStats();
+                    break;
+                case "5":
+                    exit = true;
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    break;
             }
 
             Console.WriteLine("Thank you for playing the Virtual Pet Simulator!");
