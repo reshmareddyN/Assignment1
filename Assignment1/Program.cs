@@ -44,8 +44,19 @@ class VirtualPet
     {
         if (Hunger <= 3)
         {
-            Happiness = Math.Min(10, Happiness + 2);
-            Hunger = Math.Min(10, Hunger + 1);
+            Happiness++;
+
+            if(Happiness>10)
+            {
+                Happiness = 10;
+            }
+            Hunger--;
+            
+            if(Hunger<0)
+            { 
+                Hunger = 0; 
+            }
+            
             Console.WriteLine($"{Name} has played. Happiness increased, and hunger slightly increased.");
         }
         else
