@@ -66,8 +66,20 @@ class VirtualPet
     }
     public void Rest()
     {
-        Health = Math.Min(10, Health + 2);
-        Happiness = Math.Max(0, Happiness - 1);
+        Health++;
+
+        if(Health>10)
+
+        {
+            Health = 10;
+        }
+
+        Happiness--;
+
+        if(Happiness<0)
+        { 
+            Happiness = 0;
+        }
         Console.WriteLine($"{Name} has rested. Health improved, and happiness slightly decreased.");
     }
     public void CheckStatus()
