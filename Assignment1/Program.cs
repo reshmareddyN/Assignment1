@@ -36,7 +36,7 @@ class VirtualPet
         if (Hunger <= 3)
         {
             Happiness = Math.Min(10, Happiness + 2);
-            Health = Math.Min(10, Health + 1);
+            Hunger = Math.Min(10, Hunger + 1);
             Console.WriteLine($"{Name} has played. Happiness increased, and hunger slightly increased.");
         }
         else
@@ -52,9 +52,9 @@ class VirtualPet
     }
     public void TimePasses()
         {
-            Hunger = Math.Min(10, Hunger + 1);
-            Happiness = Math.Max(0, Happiness - 1);
-            Health = Math.Max(0, Health - 1);
+            Hunger = Math.Min(10, Hunger - 1);
+            Happiness = Math.Max(0, Happiness + 1);
+            Health = Math.Max(0, Health + 1);
             //Console.WriteLine("An hour has passed. Hunger increased, and happiness and health decreased slightly.");
         }
         public void CheckStatus()
