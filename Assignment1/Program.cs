@@ -23,7 +23,7 @@ class VirtualPet
     }
     public void DisplayStats()
     {
-        Console.WriteLine($"Pet Stats - Hunger: {Hunger}/10, Happiness: {Happiness}/10, Health: {Health}/10");
+        Console.WriteLine($"Pet Stats - Hunger: {Hunger}, Happiness: {Happiness}, Health: {Health}");
     }
     public void Feed()
     {
@@ -59,14 +59,7 @@ class VirtualPet
         Happiness = Math.Max(0, Happiness - 1);
         Console.WriteLine($"{Name} has rested. Health improved, and happiness slightly decreased.");
     }
-    public void TimePasses()
-        {
-            Hunger = Math.Min(10, Hunger - 1);
-            Happiness = Math.Max(0, Happiness + 1);
-            Health = Math.Max(0, Health + 1);
-            //Console.WriteLine("An hour has passed. Hunger increased, and happiness and health decreased slightly.");
-        }
-        public void CheckStatus()
+    public void CheckStatus()
         {
             if (Hunger <= 2 || Happiness <= 2 || Health <= 2)
             {
