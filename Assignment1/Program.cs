@@ -27,8 +27,17 @@ class VirtualPet
     }
     public void Feed()
     {
-        Hunger = Math.Max(0, Hunger - 1);
-        Health = Math.Min(10, Health + 1);
+        Hunger--;
+        if(Hunger<0)
+        {
+            Hunger = 0;
+        }
+
+        Health++;
+        if(Health>10)
+        {
+            Health = 10;
+        }
         Console.WriteLine($"{Name} has been fed. Hunger decreased, and health slightly increased.");
     }
     public void Play()
